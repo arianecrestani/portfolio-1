@@ -1,5 +1,5 @@
 import "./App.css";
-import Projects from "./Components/projects";
+import Projects from "../src/Components/Projects";
 
 function App() {
   return (
