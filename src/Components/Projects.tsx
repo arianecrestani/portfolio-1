@@ -1,27 +1,32 @@
 import { db } from "../Components/FBconfig";
-import { query, collection, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 import { useEffect, useState } from "react";
 
-const projects = () => {
-  const [fetchedProjects, setFetchedProjects] = useState([]);
+type Project = {
+  id: string;
+  name: string;
+  technologies: string;
+  github: string;
+  url: string;
+  pic: string;
+};
+
+const Projects = () => {
+  const [fetchedProjects, setFetchedProjects] = useState<Project[]>([]);
 
   const getAllProjects = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, "projects"));
-      const pArray = [];
-      // console.log("querySnapshot: ", querySnapshot);
-      querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
-        const message = {
-          id: doc.id,
-          ...doc.data(),
-        };
-        pArray.push(message);
-        setFetchedProjects(pArray);
-        // console.log(message)
-      });
+      const pArray = querySnapshot.docs.map(
+        (doc) =>
+          ({
+            id: doc.id,
+            ...doc.data(),
+          } as Project)
+      );
+      setFetchedProjects(pArray);
+      console.log(fetchedProjects);
     } catch (error) {
       console.log(error);
     }
@@ -31,7 +36,14 @@ const projects = () => {
     getAllProjects();
   }, []);
 
-  return <div>projects</div>;
+  return (
+    <div>
+      <h1>test</h1>
+      {fetchedProjects.map((project) => {
+        return <div key={project.id}>{project.name}</div>;
+      })}
+    </div>
+  );
 };
 
-export default projects;
+export default Projects;
