@@ -2,6 +2,7 @@ import { db } from "../Components/FBconfig";
 import { collection, getDocs } from "firebase/firestore";
 
 import { useEffect, useState } from "react";
+import Navbar from "./Navbar";
 
 type Project = {
   id: string;
@@ -36,11 +37,19 @@ const Projects = () => {
     getAllProjects();
   }, []);
 
+  console.log(fetchedProjects);
+
   return (
     <div>
       <h1>test</h1>
       {fetchedProjects.map((project) => {
-        return <div key={project.id}>{project.name}</div>;
+        return (
+          <div key={project.id}>
+            <p>{project.name}</p>
+            <p>{project.github}</p>
+            <p>{project.technologies}</p>
+          </div>
+        );
       })}
     </div>
   );
