@@ -26,7 +26,7 @@ const Navbar = () => {
       <a href="#section1">Home</a>
       <a href="#section2">News</a>
       <a href="#section3">Contact</a>
-      <a href="#section4">Contact</a>
+      <a href="#section4">test</a>
     </div>
   );
 };

@@ -1,8 +1,7 @@
-import { db } from "../Components/FBconfig";
+import { db } from "../Components/NewFBconfig";
 import { collection, getDocs } from "firebase/firestore";
 
 import { useEffect, useState } from "react";
-import Navbar from "./Navbar";
 
 type Project = {
   id: string;
