@@ -1,9 +1,46 @@
 import "./App.css";
-import Projects from "../src/Components/Projects";
 import Navbar from "./Components/Navbar";
 import background from "../src/assets/background.mp4";
+import AboutMe from "./Components/AboutMe";
+import { db } from "../src/Components/NewFBconfig";
+import { collection, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import Project from "./Components/Project";
+
+type Pro = {
+  id: string;
+  name: string;
+  technologies: string;
+  github: string;
+  url: string;
+  pic: string;
+};
 
 function App() {
+  const [fetchedProjects, setFetchedProjects] = useState<Pro[]>([]);
+
+  const getAllProjects = async () => {
+    try {
+      const querySnapshot = await getDocs(collection(db, "projects"));
+      const pArray = querySnapshot.docs.map(
+        (doc) =>
+          ({
+            id: doc.id,
+            ...doc.data(),
+          } as Pro)
+      );
+      setFetchedProjects(pArray);
+      console.log(fetchedProjects);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getAllProjects();
+  }, []);
+
+  console.log(fetchedProjects);
   return (
     <>
       <Navbar />
@@ -14,15 +51,22 @@ function App() {
         <video src={background} playsInline autoPlay muted loop></video>
       </section>
       <section id="section2" style={{ backgroundColor: "yellow" }}>
-        second paragraph
+        <AboutMe />
       </section>
       <section id="section3" style={{ backgroundColor: "lightgreen" }}>
-        third paragraph
+        {fetchedProjects.map((project) => {
+          return (
+            <Project
+              key={project.id}
+              name={project.name}
+              github={project.github}
+            />
+          );
+        })}
       </section>
       <section id="section4" style={{ backgroundColor: "blue" }}>
-        forth paragraph
+        Contact
       </section>
-      <footer></footer>
     </>
   );
 }
