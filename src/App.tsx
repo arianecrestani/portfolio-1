@@ -1,47 +1,25 @@
 import "./App.css";
 import Projects from "../src/Components/Projects";
 import Navbar from "./Components/Navbar";
+import background from "../src/assets/background.mp4";
 
 function App() {
   return (
     <>
-      {/* <a
-        style={{
-          backgroundColor: "purple",
-          display: "block",
-          height: "25px",
-        }}
-        href="#section4"
-      >
-        link to section 4
-      </a> */}
       <Navbar />
-      <h1>this is my portfolio</h1>
-      <Projects />
-
-      <hr />
-      <section
-        id="section1"
-        style={{ backgroundColor: "gray", height: "100vh" }}
-      >
-        first paragraph
+      {/* <h1>this is my portfolio</h1> */}
+      {/* <Projects /> */}
+      {/* <hr /> */}
+      <section id="section1" style={{ backgroundColor: "gray" }}>
+        <video src={background} playsInline autoPlay muted loop></video>
       </section>
-      <section
-        id="section2"
-        style={{ backgroundColor: "yellow", height: "100vh" }}
-      >
+      <section id="section2" style={{ backgroundColor: "yellow" }}>
         second paragraph
       </section>
-      <section
-        id="section3"
-        style={{ backgroundColor: "lightgreen", height: "100vh" }}
-      >
+      <section id="section3" style={{ backgroundColor: "lightgreen" }}>
         third paragraph
       </section>
-      <section
-        id="section4"
-        style={{ backgroundColor: "blue", height: "100vh" }}
-      >
+      <section id="section4" style={{ backgroundColor: "blue" }}>
         forth paragraph
       </section>
       <footer></footer>
