@@ -60,6 +60,9 @@ function App() {
               key={project.id}
               name={project.name}
               github={project.github}
+              pic={project.pic}
+              tech={project.technologies}
+              url={project.url}
             />
           );
         })}
