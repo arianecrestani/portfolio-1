@@ -6,15 +6,17 @@ body{
   background-color: white;
   color: black;
  display: block;
+  font-family: 'Josefin Sans',
+      sans-serif;
 }
 
 
 #navbar {
   background-color: #333;
-  height: 2rem;
   z-index: 1;
   position: fixed;
   width: 100vw;
+  padding: 1rem 0.5rem;
 }
 
 /* Navbar links */
@@ -24,8 +26,11 @@ body{
   padding: 14px;
   text-decoration: none;
 }
+#navbar a:hover {
+text-decoration: underline;
+}
 #navbar .active-link {
-  color: green;
+  color: rgb(225, 62, 7);
 }
 video{
   width: 100vw;
