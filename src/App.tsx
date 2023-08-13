@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import background from "../src/assets/background.mp4";
 import AboutMe from "./Components/AboutMe";
-import { db } from "../src/Components/NewFBconfig";
+import { db } from "../src/Components/FbConfig";
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Project from "./Components/Project";
@@ -68,7 +68,7 @@ function App() {
         })}
       </section>
       <section id="section4" style={{ backgroundColor: "blue" }}>
-        Contact
+        Contact hello
       </section>
     </>
   );
