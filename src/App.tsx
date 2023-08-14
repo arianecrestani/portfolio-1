@@ -53,19 +53,21 @@ function App() {
       <section id="section2" style={{ backgroundColor: "yellow" }}>
         <AboutMe />
       </section>
-      <section id="section3" style={{ backgroundColor: "lightgreen" }}>
-        {fetchedProjects.map((project) => {
-          return (
-            <Project
-              key={project.id}
-              name={project.name}
-              github={project.github}
-              pic={project.pic}
-              tech={project.technologies}
-              url={project.url}
-            />
-          );
-        })}
+      <section id="section3">
+        <div className="flex-container">
+          {fetchedProjects.map((project) => {
+            return (
+              <Project
+                key={project.id}
+                name={project.name}
+                github={project.github}
+                pic={project.pic}
+                tech={project.technologies}
+                url={project.url}
+              />
+            );
+          })}
+        </div>
       </section>
       <section id="section4" style={{ backgroundColor: "blue" }}>
         Contact

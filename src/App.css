@@ -40,3 +40,35 @@ video{
   object-position: center;
   margin-top: 48px;
 }
+
+.project-div{
+  width: 35rem;
+  border: 2px solid rgb(239, 159, 0);
+  text-align: center;
+}
+.hovered{
+  background-color: #030202;
+  opacity: 0.3;
+}
+.github{
+  z-index: 2;
+  color: aqua;
+}
+
+#section3{
+  background-color:white;
+}
+.flex-container{
+  margin: 0 auto;
+  padding-block: 2REM;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30PX;
+  column-gap: 30PX;
+  justify-content: center;
+}
+
+.project-div h3 , p{
+  margin-block:0.5rem ;
+}

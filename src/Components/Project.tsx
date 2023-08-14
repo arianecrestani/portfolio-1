@@ -1,11 +1,4 @@
-// type Pro = {
-//   id: string;
-//   name: string;
-//   technologies: string;
-//   github: string;
-//   url: string;
-//   pic: string;
-// };
+import { useState } from "react";
 
 type ProjectProps = {
   name: string;
@@ -17,15 +10,38 @@ type ProjectProps = {
 };
 
 const Project: React.FC<ProjectProps> = ({ name, github, pic, tech, url }) => {
+  const [hovered, setHovered] = useState(false);
+
   return (
-    <div className="project-div">
-      <p>{name}</p>
-      <p>{github}</p>
-      <p>
-        <img style={{ width: "200px" }} src={pic} alt="project-screenshot" />
-      </p>
+    <div
+      className="project-div"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div>
+        <img
+          className={hovered ? "project-pic-div hovered" : "project-pic-div"}
+          style={{ width: "100%" }}
+          src={pic}
+          alt="project-screenshot"
+        />
+        {hovered && (
+          <>
+            <b className="github">
+              <a href={github}>link to github</a>
+            </b>
+          </>
+        )}
+      </div>
+      <h3>{name}</h3>
+      <p>Technologies:</p>
       <p>{tech}</p>
-      <p>{url}</p>
+
+      {/* {hovered && (
+        <>
+          <a href={github}>link on hovered</a>
+        </>
+      )} */}
     </div>
   );
 };
