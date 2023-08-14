@@ -7,6 +7,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Project from "./Components/Project";
 
+
 type Pro = {
   id: string;
   name: string;
@@ -50,7 +51,7 @@ function App() {
       <section id="section1" style={{ backgroundColor: "gray" }}>
         <video src={background} playsInline autoPlay muted loop></video>
       </section>
-      <section id="section2" style={{ backgroundColor: "yellow" }}>
+      <section id="section2" style={{  }}>
         <AboutMe />
       </section>
       <section id="section3" style={{ backgroundColor: "lightgreen" }}>
