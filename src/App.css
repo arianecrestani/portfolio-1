@@ -43,7 +43,7 @@ video{
 
 .project-div{
   width: 35rem;
-  border: 2px solid rgb(239, 159, 0);
+  border: 2px solid rgb(235, 60, 2);
   text-align: center;
 }
 .hovered{
@@ -97,4 +97,6 @@ display: block;
 .links a {
   margin-inline:0.5rem;
   text-decoration: underline;
+  color: rgb(235, 60, 2);
+  font-weight: bold;
 }
