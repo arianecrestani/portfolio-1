@@ -31,7 +31,8 @@ text-decoration: underline;
 }
 
 #navbar .active-link {
-  color: rgb(235, 60, 2);
+  /* color: rgb(235, 60, 2); */
+  color: black;
 }
 video{
   width: 100vw;
@@ -43,8 +44,10 @@ video{
 
 .project-div{
   width: 35rem;
-  border: 2px solid rgb(235, 60, 2);
+  border: 2px solid black;
+  border-radius: 10px;
   text-align: center;
+  overflow: hidden;
 }
 .hovered{
   background-color: #030202;
@@ -70,7 +73,7 @@ video{
 }
 
 .project-div h3 , p{
-  margin-block:0.5rem ;
+  margin-block:1.2rem ;
 }
 
 
@@ -96,7 +99,4 @@ display: block;
 
 .links a {
   margin-inline:0.5rem;
-  text-decoration: underline;
-  color: rgb(235, 60, 2);
-  font-weight: bold;
 }

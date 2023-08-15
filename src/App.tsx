@@ -44,10 +44,10 @@ function App() {
   return (
     <>
       <Navbar />
-      <section id="section1" style={{ backgroundColor: "gray" }}>
+      <section id="section1">
         <video src={background} playsInline autoPlay muted loop></video>
       </section>
-      <section id="section2" style={{ backgroundColor: "yellow" }}>
+      <section id="section2">
         <AboutMe />
       </section>
       <section id="section3">
