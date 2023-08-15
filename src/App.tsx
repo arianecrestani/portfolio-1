@@ -44,9 +44,6 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <h1>this is my portfolio</h1> */}
-      {/* <Projects /> */}
-      {/* <hr /> */}
       <section id="section1" style={{ backgroundColor: "gray" }}>
         <video src={background} playsInline autoPlay muted loop></video>
       </section>

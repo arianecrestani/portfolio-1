@@ -18,20 +18,17 @@ const Project: React.FC<ProjectProps> = ({ name, github, pic, tech, url }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div>
+      <div className="test">
         <img
           className={hovered ? "project-pic-div hovered" : "project-pic-div"}
           style={{ width: "100%" }}
           src={pic}
           alt="project-screenshot"
         />
-        {hovered && (
-          <>
-            <b className="github">
-              <a href={github}>link to github</a>
-            </b>
-          </>
-        )}
+        <div className="links">
+          <a href={github}>Github</a>
+          <a href={url}>Deployment</a>
+        </div>
       </div>
       <h3>{name}</h3>
       <p>Technologies:</p>

@@ -50,10 +50,10 @@ video{
   background-color: #030202;
   opacity: 0.3;
 }
-.github{
+/* .github{
   z-index: 3;
   color: aqua;
-}
+} */
 
 #section3{
   background-color:white;
@@ -71,4 +71,30 @@ video{
 
 .project-div h3 , p{
   margin-block:0.5rem ;
+}
+
+
+.test {
+  position: relative;
+  overflow: hidden;
+  /* this ensures everything stays within the div */
+  }
+
+.links {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: none;
+/* By default, it won't be displayed */
+}
+
+
+.test:hover .links {
+display: block;
+}
+
+.links a {
+  margin-inline:0.5rem;
+  text-decoration: underline;
 }
