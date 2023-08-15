@@ -35,10 +35,16 @@ const About = () => {
               <li>HTML</li>
               <li>CSS</li>
               <li>Git &#38; Github</li>
+              <li>GraphQL</li>
+              <li>Next.js</li>
             </ul>
             <ul className="about__body-skills-2">
               <li>React</li>
               <li>Node.js</li>
+              <li>Typescript</li>
+              <li>Firebase</li>
+              <li>Mongo</li>
+              <li>Express</li>
             </ul>
           </div>
         </div>
