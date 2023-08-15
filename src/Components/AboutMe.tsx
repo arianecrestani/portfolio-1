@@ -1,8 +1,6 @@
-
 // import "./About.css";
-import profile from '../profile.jpg'
-import "./AboutMe.css"
-
+import profile from "../profile.jpg";
+import "./AboutMe.css";
 
 const About = () => {
   return (
