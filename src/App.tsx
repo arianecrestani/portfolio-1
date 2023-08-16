@@ -53,7 +53,7 @@ function App() {
       <section id="section3">
         <div className="about__header">
           <h1 className="project-header">
-            <span className="about__header-num">03.</span>Projects
+            <span className="about__header-num">03.</span>Projects test
           </h1>
           <div className="header-line"></div>
         </div>
