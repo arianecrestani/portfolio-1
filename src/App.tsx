@@ -52,12 +52,9 @@ function App() {
         <AboutMe />
       </section>
       <section id="section3">
-        <div className="about__header">
-          <h1 className="project-header">
-            <span className="about__header-num">03.</span>Projects
-          </h1>
-          <div className="header-line"></div>
-        </div>
+        <h1 className="global-header">
+          <span className="about__header-num">03.</span>Projects
+        </h1>
         <div className="flex-container">
           {fetchedProjects.map((project) => {
             return (
@@ -74,7 +71,7 @@ function App() {
         </div>
       </section>
       <section id="section4" style={{}}>
-        <Contact/>
+        <Contact />
       </section>
     </>
   );

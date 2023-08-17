@@ -11,7 +11,7 @@
 
 .contact__question {
   color: var(--secondary-color);
-  font-family: 'Cutive Mono', monospace, sans-serif;
+  font-family: "Cutive Mono", monospace, sans-serif;
   text-align: center;
   animation: slideInLeft 1.2s ease-in-out;
 }

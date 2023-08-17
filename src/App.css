@@ -1,15 +1,13 @@
-*{
+* {
   margin: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: white;
   color: black;
- display: block;
-  font-family: 'Josefin Sans',
-      sans-serif;
+  display: block;
+  font-family: "Josefin Sans", sans-serif;
 }
-
 
 #navbar {
   background-color: #aeaeae;
@@ -27,29 +25,29 @@ body{
   text-decoration: none;
 }
 #navbar a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 #navbar .active-link {
   /* color: rgb(235, 60, 2); */
   color: black;
 }
-video{
+video {
   width: 100vw;
-  height: calc(9/21 * 100vw);
+  height: calc(9 / 21 * 100vw);
   object-fit: cover;
   object-position: center;
   margin-top: 48px;
 }
 
-.project-div{
+.project-div {
   width: 35rem;
   border: 2px solid black;
   border-radius: 10px;
   text-align: center;
   overflow: hidden;
 }
-.hovered{
+.hovered {
   background-color: #030202;
   opacity: 0.3;
 }
@@ -58,52 +56,66 @@ video{
   color: aqua;
 } */
 
-#section3{
-  background-color:white;
+#section3 {
+  background-color: white;
 }
-.flex-container{
+.flex-container {
   margin: 0 auto;
-  padding-block: 2REM;
+  padding-block: 2rem;
   width: 80%;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 30PX;
-  column-gap: 30PX;
+  row-gap: 30px;
+  column-gap: 30px;
   justify-content: center;
 }
 
-.project-div h3 , p{
-  margin-block:1.2rem ;
+.project-div h3,
+p {
+  margin-block: 1.2rem;
 }
-
 
 .test {
   position: relative;
   overflow: hidden;
   /* this ensures everything stays within the div */
-  }
-
-.links {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-display: none;
-/* By default, it won't be displayed */
 }
 
+.links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  /* By default, it won't be displayed */
+}
 
 .test:hover .links {
-display: block;
+  display: block;
 }
 
 .links a {
-  margin-inline:0.5rem;
+  margin-inline: 0.5rem;
 }
 
-.project-header{
+/* .project-header,
+.about__header {
   margin-bottom: 0;
   margin-top: 10rem;
   padding: 30px;
   margin: 50px;
+} */
+/* 
+.about__header {
+  text-align: left;
+} */
+
+.global-header {
+  /* padding: 30px; */
+  margin: 50px;
+  text-align: left;
+  font-weight: bolder;
+  font-size: 2rem;
+  margin-left: 150px;
+  margin-top: 75px;
 }

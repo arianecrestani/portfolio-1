@@ -16,7 +16,7 @@ const Navbar = () => {
         Home
       </a>
       <a
-        href="#section2"
+        href="#aboutMe"
         className={activeLink === "about" ? "active-link" : ""}
         onClick={() => setActiveLink("about")}
       >
