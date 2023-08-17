@@ -52,6 +52,7 @@ video{
 .hovered{
   background-color: #030202;
   opacity: 0.3;
+  transition: all 0.4s linear;
 }
 /* .github{
   z-index: 3;

@@ -13,15 +13,15 @@ const About = () => {
       </div>
       <div className="about__aboutRow">
         <div className="about__body">
-          <p>
-            Hey! I'm Ariane Crestani, a frontend web developer based in Berlin.
-          </p>
+          <p>Hey! I'm Doron Breska.</p>
           <br />
           <p>
-            I enjoy creating websites or anything in between. My goal is always
-            to build products that provide beautiful UI and performant
-            experiences. I love to have new challenges and learn something new.
-            The IT fields realize my wish to keep going to challenge myself.
+            As a junior full stack web developer, I merge my passion for design
+            and coding to create cohesive web solutions. A graduate from [Your
+            University/Institute], I am adept at transforming ideas into
+            functional and visually appealing applications. Beyond coding, I
+            value collaboration and continuous learning, ensuring every project
+            benefits from the latest in web development innovations.
           </p>
           <br />
 
@@ -43,7 +43,7 @@ const About = () => {
         <div className="about__image">
           <div className="about__image-imageBorder"></div>
           <div className="about__image-imageLayer"></div>
-          <img src={profile} alt="Ariane Crestani" />
+          <img src={profile} alt="Profile-pic" />
         </div>
       </div>
     </div>
