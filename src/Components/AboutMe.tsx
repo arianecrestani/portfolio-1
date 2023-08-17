@@ -17,11 +17,12 @@ const About = () => {
           <br />
           <p>
             As a junior full stack web developer, I merge my passion for design
-            and coding to create cohesive web solutions. A graduate from [Your
-            University/Institute], I am adept at transforming ideas into
-            functional and visually appealing applications. Beyond coding, I
-            value collaboration and continuous learning, ensuring every project
-            benefits from the latest in web development innovations.
+            and coding to create cohesive web solutions. <br />A graduate from
+            Code Academy Berlin, I am adept at transforming ideas into
+            functional and visually appealing applications. <br />
+            Beyond coding, I value collaboration and continuous learning,
+            ensuring every project benefits from the latest in web development
+            innovations.
           </p>
           <br />
 
@@ -43,7 +44,7 @@ const About = () => {
         <div className="about__image">
           <div className="about__image-imageBorder"></div>
           <div className="about__image-imageLayer"></div>
-          <img src={profile} alt="Profile-pic" />
+          <img src={profile} alt="Profilepic" />
         </div>
       </div>
     </div>
