@@ -4,6 +4,7 @@ import "./AboutMe.css";
 
 const About = () => {
   return (
+
     <>
       <h1 className="global-header" id="aboutMe">
         <span>02.</span>About
@@ -51,6 +52,7 @@ const About = () => {
             <div className="about__image-imageLayer"></div>
             <img src={profile} alt="Ariane Crestani" />
           </div>
+
         </div>
       </div>
     </>
