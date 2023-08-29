@@ -1,12 +1,12 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import background from "../src/assets/background.mp4";
-import AboutMe from "./Components/AboutMe";
-import { db } from "../src/Components/NewFBconfig";
+import AboutMe from "./Components/About";
+import { db } from "../src/Components/FBconfig";
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Project from "./Components/Project";
-import Contact from "./Components/Contact";
+import ContactMe from "./Components/ContactMe";
 
 type Pro = {
   id: string;
@@ -71,7 +71,7 @@ function App() {
         </div>
       </section>
       <section id="section4" style={{}}>
-        <Contact />
+        <ContactMe />
       </section>
     </>
   );

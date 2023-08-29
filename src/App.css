@@ -39,9 +39,15 @@ video {
   object-position: center;
   margin-top: 48px;
 }
+.project-pic-div {
+  max-height: 20rem;
+  object-fit: cover;
+
+}
 
 .project-div {
   width: 35rem;
+  max-height: 30rem;
   border: 2px solid black;
   border-radius: 10px;
   text-align: center;

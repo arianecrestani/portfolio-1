@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState<string | null>(null);
