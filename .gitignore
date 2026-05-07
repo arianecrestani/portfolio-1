@@ -28,3 +28,5 @@ dist-ssr
 About.tsx
 FBconfig.tsx
 ContactMe.tsx
+# Local Netlify folder
+.netlify

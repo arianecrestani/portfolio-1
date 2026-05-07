@@ -3,7 +3,7 @@ import Navbar from "./Components/Navbar";
 import background from "../src/assets/background.mp4";
 import AboutMe from "./Components/About";
 import { db } from "../src/Components/FBconfig";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Project from "./Components/Project";
 import ContactMe from "./Components/ContactMe";
@@ -15,6 +15,7 @@ type Pro = {
   github: string;
   url: string;
   pic: string;
+  position: number;
 };
 
 function App() {
@@ -22,7 +23,11 @@ function App() {
 
   const getAllProjects = async () => {
     try {
-      const querySnapshot = await getDocs(collection(db, "projects"));
+      const projectsQuery = query(
+        collection(db, "projects"),
+        orderBy("position", "asc")
+      );
+      const querySnapshot = await getDocs(projectsQuery);
       const pArray = querySnapshot.docs.map(
         (doc) =>
           ({

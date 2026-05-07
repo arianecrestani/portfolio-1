@@ -61,11 +61,6 @@ const Project: React.FC<ProjectProps> = ({ name, github, pic, tech, url }) => {
       <p>Technologies:</p>
       <p>{tech}</p>
 
-      {/* {hovered && (
-        <>
-          <a href={github}>link on hovered</a>
-        </>
-      )} */}
     </div>
   );
 };
