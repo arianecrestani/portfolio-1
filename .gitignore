@@ -24,4 +24,9 @@ dist-ssr
 *.sw?
 
 
-NewFBconfig.tsx
+
+About.tsx
+FBconfig.tsx
+ContactMe.tsx
+# Local Netlify folder
+.netlify

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState<string | null>(null);
@@ -16,7 +17,7 @@ const Navbar = () => {
         Home
       </a>
       <a
-        href="#section2"
+        href="#aboutMe"
         className={activeLink === "about" ? "active-link" : ""}
         onClick={() => setActiveLink("about")}
       >

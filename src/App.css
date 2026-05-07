@@ -1,20 +1,20 @@
-*{
+* {
   margin: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: white;
   color: black;
- display: block;
-  font-family: 'Josefin Sans',
-      sans-serif;
+  display: block;
+  font-family: "Josefin Sans", sans-serif;
 }
-
 
 #navbar {
   background-color: #aeaeae;
-  z-index: 1;
+  z-index: 10;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   padding: 1rem 0.5rem;
 }
@@ -27,16 +27,121 @@ body{
   text-decoration: none;
 }
 #navbar a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 #navbar .active-link {
-  color: rgb(235, 60, 2);
+  /* color: rgb(235, 60, 2); */
+  color: black;
 }
-video{
+
+#section1 {
+  position: relative;
   width: 100vw;
-  height: calc(9/21 * 100vw);
+  height: calc(9 / 21 * 100vw);
+  margin-top: 48px;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
-  margin-top: 48px;
+  display: block;
+}
+
+.project-pic-div {
+  max-height: 20rem;
+  object-fit: cover;
+}
+
+.project-div {
+  width: 35rem;
+  max-height: 30rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+.hovered {
+  background-color: #030202;
+  opacity: 0.3;
+  transition: all 0.4s linear;
+}
+
+
+#section3 {
+  background-color: white;
+}
+
+#section3 .global-header {
+  margin-top: 2rem;
+}
+
+.flex-container {
+  margin: 0 auto;
+  padding-block: 2rem;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 30px;
+  justify-content: center;
+}
+
+.project-div h3,
+p {
+  margin-block: 1.2rem;
+}
+
+.test {
+  position: relative;
+  overflow: hidden;
+  /* this ensures everything stays within the div */
+}
+
+.links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  /* By default, it won't be displayed */
+}
+
+.test:hover .links {
+  display: block;
+}
+
+.links a {
+  margin-inline: 0.5rem;
+}
+
+/* .project-header,
+.about__header {
+  margin-bottom: 0;
+  margin-top: 10rem;
+  padding: 30px;
+  margin: 50px;
+} */
+/* 
+.about__header {
+  text-align: left;
+} */
+
+.global-header {
+  /* padding: 30px; */
+  margin: 50px;
+  text-align: left;
+  font-weight: bolder;
+  font-size: 2rem;
+  margin-left: 150px;
+  margin-top: 75px;
+}
+
+#aboutMe {
+  width: min(900px, calc(100% - 2rem));
+  margin-left: auto;
+  margin-right: auto;
 }

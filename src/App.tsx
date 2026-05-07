@@ -1,11 +1,12 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import background from "../src/assets/background.mp4";
-import AboutMe from "./Components/AboutMe";
-import { db } from "../src/Components/NewFBconfig";
-import { collection, getDocs } from "firebase/firestore";
+import AboutMe from "./Components/About";
+import { db } from "../src/Components/FBconfig";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Project from "./Components/Project";
+import ContactMe from "./Components/ContactMe";
 
 type Pro = {
   id: string;
@@ -14,6 +15,7 @@ type Pro = {
   github: string;
   url: string;
   pic: string;
+  position: number;
 };
 
 function App() {
@@ -21,7 +23,11 @@ function App() {
 
   const getAllProjects = async () => {
     try {
-      const querySnapshot = await getDocs(collection(db, "projects"));
+      const projectsQuery = query(
+        collection(db, "projects"),
+        orderBy("position", "asc")
+      );
+      const querySnapshot = await getDocs(projectsQuery);
       const pArray = querySnapshot.docs.map(
         (doc) =>
           ({
@@ -44,31 +50,33 @@ function App() {
   return (
     <>
       <Navbar />
-      {/* <h1>this is my portfolio</h1> */}
-      {/* <Projects /> */}
-      {/* <hr /> */}
-      <section id="section1" style={{ backgroundColor: "gray" }}>
+      <section id="section1">
         <video src={background} playsInline autoPlay muted loop></video>
       </section>
-      <section id="section2" style={{ backgroundColor: "yellow" }}>
+      <section id="section2">
         <AboutMe />
       </section>
-      <section id="section3" style={{ backgroundColor: "lightgreen" }}>
-        {fetchedProjects.map((project) => {
-          return (
-            <Project
-              key={project.id}
-              name={project.name}
-              github={project.github}
-              pic={project.pic}
-              tech={project.technologies}
-              url={project.url}
-            />
-          );
-        })}
+      <section id="section3">
+        <h1 className="global-header">
+          <span className="about__header-num">03.</span>Projects
+        </h1>
+        <div className="flex-container">
+          {fetchedProjects.map((project) => {
+            return (
+              <Project
+                key={project.id}
+                name={project.name}
+                github={project.github}
+                pic={project.pic}
+                tech={project.technologies}
+                url={project.url}
+              />
+            );
+          })}
+        </div>
       </section>
-      <section id="section4" style={{ backgroundColor: "blue" }}>
-        Contact
+      <section id="section4" style={{}}>
+        <ContactMe />
       </section>
     </>
   );
